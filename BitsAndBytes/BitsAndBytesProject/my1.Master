@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="my1.master.cs" Inherits="SignUp.my1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+   <%-- datatables--%>
+    <link href="dataTables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%--myStyle--%>
+    <link href="myStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%--navigation div--%>
+        <div>
+            <nav class="navbar navbar-expand-Ig navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                <img src="Images/logoBits.jpg" width="40" height="40"/>
+                Bits and Bytes System 
+              
+                <div class="navbar-nav" id="navbarSupporterContent">
+                    <ul class="nav">
+                        <li class="nav-item active">
+                            </a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item active">
+                            <a class="nav-link" href="ContactUs.aspx">Contact Us  </a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <li class="nav-item active">
+                            <a class="nav-link" href="vacancies.aspx">Vacancies  </a>
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                         <li class="nav-item active">
+                        </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                     <li class="nav-item active">
+                        <asp:LinkButton CssClass="nav-link" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">
+                            Log Out  
+                        </asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                    </li>
+
+                    </ul>
+               
+               <%-- <ul class="nav">
+                    <li class="nav-item active">
+                        <asp:LinkButton CssClass="nav-link" ID="LinkButton1" runat="server">
+                            Log in
+                        </asp:LinkButton>
+                    </li>
+                     <li class="nav-item active">
+                        <asp:LinkButton CssClass="nav-link" ID="LinkButton2" runat="server">
+                            Sign Up
+                        </asp:LinkButton>
+                    </li>
+                     <li class="nav-item active">
+                        <asp:LinkButton CssClass="nav-link" ID="LinkButton3" runat="server">
+                            Log Out
+                        </asp:LinkButton>
+                    </li>
+                     </ul>--%>
+                    </div>
+               
+
+                
+
+               
+               
+            </nav>
+        </div>
+        <%--main content div--%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%--footer--%>
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center ">
+                        <p>
+                            <asp:LinkButton CssClass="footerlinks" ID="LinkBtnAdmin" runat="server">
+                                
+                            </asp:LinkButton>&nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton4" runat="server">
+                               
+                            </asp:LinkButton>&nbsp;
+                            <asp:LinkButton CssClass="footerlinks" ID="LinkButton5" runat="server">
+                               
+                            </asp:LinkButton>&nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid text-center">
+            <p> <img src="Images/logoBits.jpg" width="60" height="60"/>
+             Brought to you by Bits and Bytes, "Innovation, Step by Step"</p>
+                </div>
+        </footer>
+
+
+
+
+
+    </form>
+</body>
+</html>

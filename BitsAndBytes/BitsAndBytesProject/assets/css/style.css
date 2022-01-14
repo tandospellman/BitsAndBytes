@@ -1,0 +1,256 @@
+﻿body {
+    color: #666666;
+    font-family: "RobotoDraft", "Roboto", sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.header {
+    background-color:white ;
+}
+hr{
+   outline-width:20px;
+}
+.desc{
+    color:black;
+    font-size:16px !important;
+    float:right;
+    padding-right:15%;
+}
+.row{
+    margin-left:7%;
+}
+.displayline {
+    width: 22%;
+    padding-right: 20px;
+}
+.border {
+    max-width: 100%;
+    display: flex;
+}
+
+.displayliner {
+    width: 22%;
+    display: inline-block;
+}
+.align {
+    flex: 1;
+    float: right;
+    text-align: right;
+}
+
+.buttpad {
+    margin-left: 10px;
+}
+
+.coloraccent {
+    background-color: rgb(255, 153, 0) !important;
+    color: black !important;
+    margin-left: 10px;
+}
+.portals{
+    margin-right:10%;
+    background-color:white;
+}
+.buttons {
+    display: flex;
+}
+.loginCard {
+    position: relative;
+    width: 90%;
+}
+
+    .loginCard.active .card:first-child {
+        background: #f2f2f2;
+        margin: 0 15px;
+        position: center;
+    }
+
+/* Card */
+.card {
+    background: #ffffff;
+    border-radius: 2px;
+    padding: 40px 0 20px 0;
+    box-sizing: border-box;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+    .card:first-child {
+        background: #fafafa;
+        height: 10px;
+        border-radius: 5px 5px 0 0;
+        margin: 0 50px;
+        margin-left:400px;
+        padding: 0;
+    }
+
+    .card .title {
+        position: relative;
+        z-index: 1;
+        border-left: 5px solid #ed2553;
+        margin: 0 0 35px;
+        padding: 10px 0 10px 50px;
+        color: #ed2553;
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    /*Input styles */
+    .card .input-container {
+        position: relative;
+        margin: 0 30% 50px;
+    }
+
+        .card .input-container input {
+            outline: none;
+            z-index: 1;
+            position: relative;
+            background: none;
+            width: 250%;
+            height: 20px;
+            border: 0;
+            color: #212121;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+            .card .input-container input:focus ~ label {
+                color: #9d9d9d;
+                transform: translate(-16%, -95%) scale(0.65);
+            }
+
+            .card .input-container input:focus ~ .bar:before, .card .input-container input:focus ~ .bar:after {
+                width: 50%;
+            }
+
+            .card .input-container input:valid ~ label {
+                color: #9d9d9d;
+                text-align:start;
+                transform: translate(-20%, -95%) scale(0.65);
+            }
+
+        .card .input-container label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #757575;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 20px;
+            transition: 0.2s ease;
+        }
+
+        .card .input-container .bar {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background: #757575;
+            width: 250%;
+            height: 1px;
+        }
+
+        /*button styles*/
+        .btnClass{
+            text-decoration:none;
+        } 
+        .btnClass:hover{
+            text-decoration:none;
+        }
+        .btnClass:after{
+            text-decoration:none;
+        }
+
+            .card .input-container .bar:before, .card .input-container .bar:after {
+                content: "";
+                position: absolute;
+                background: #ed2553;
+                width: 0;
+                height: 2px;
+                transition: 0.2s ease;
+            }
+
+            .card .input-container .bar:before {
+                left: 50%;
+            }
+
+            .card .input-container .bar:after {
+                right: 50%;
+            }
+
+    .card .button-container {
+        margin: 0 60px;
+        text-align: center;
+    }
+
+        .card .button-container .btnClass {
+            outline: 0;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            background: 0;
+            width: 240px;
+            border: 2px solid #e3e3e3;
+            padding: 20px 0;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .card .button-container .btnClass span {
+            position: relative;
+            z-index: 1;
+            color: #ed2553;
+            transition: 0.3s ease;
+        }
+
+            .card .button-container .btnClass:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: block;
+                background: #ed2553;
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                margin: -15px 0 0 -15px;
+                opacity: 0;
+                transition: 0.3s ease;
+            }
+
+
+            .card .button-container .btnClass:active, .card .button-container .btnClass {
+                border-color: #ed2553;
+            }
+
+                .card .button-container .btnClass:hover {
+                    background-color: #ed5555;
+                }
+
+                    .card .button-container .btnClass:hover span, .card .button-container .btnClass:active span, .card .button-container .btnClass:focus span {
+                        color: white;
+                    }
+
+                .card .button-container .btnClass:active:before, .card .button-container .btnClass:focus:before {
+                    opacity: 1;
+                    transform: scale(10);
+                }
+/* Keyframes */
+@-webkit-keyframes buttonFadeInUp {
+    0% {
+        bottom: 30px;
+        opacity: 0;
+    }
+}
+
+@keyframes buttonFadeInUp {
+    0% {
+        bottom: 30px;
+        opacity: 0;
+    }
+}
+}

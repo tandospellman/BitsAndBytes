@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CoordinatorMaster.master.cs" Inherits="BitsAndBytesProject.CoordinatorMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bits And Bytes</title>
+     
+    <link rel="stylesheet" href="../Content/Stellar-master/Stellar-master/vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../Content/Stellar-master/Stellar-master/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="../Content/Stellar-master/Stellar-master/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../Content/Stellar-master/Stellar-master/vendors/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../Content/Stellar-master/Stellar-master/vendors/chartist/chartist.min.css">
+    <link rel="stylesheet" href="../Content/Stellar-master/Stellar-master/css/style.css">
+    <link rel="shortcut icon" href="../Content/Stellar-master/Stellar-master/images/favicon.png" />
+    <script src="../Content/Stellar-master/Stellar-master/vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- Plugin js for this page -->
+        <script src="../Content/Stellar-master/Stellar-master/./vendors/chart.js/Chart.min.js"></script>
+        <script src="../Content/Stellar-master/Stellar-master/./vendors/moment/moment.min.js"></script>
+        <script src="../Content/Stellar-master/Stellar-master/./vendors/daterangepicker/daterangepicker.js"></script>
+        <script src="../Content/Stellar-master/Stellar-master/./vendors/chartist/chartist.min.js"></script>
+        <!-- End plugin js for this page -->
+        <!-- inject:js -->
+        <script src="../Content/Stellar-master/Stellar-master/js/off-canvas.js"></script>
+        <script src="../Content/Stellar-master/Stellar-master/js/misc.js"></script>
+        <!-- endinject -->
+        <!-- Custom js for this page -->
+        <script src="../Content/Stellar-master/Stellar-master/./js/dashboard.js"></script>
+        <!-- End custom js for this page -->
+        <script src="Scripts/Help.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js'></script><script  src="./script.js"></script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="container-scroller">
+                <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style="background-color: blanchedalmond;">
+                    <div class="navbar-brand-wrapper d-flex align-items-center">
+
+                        <a class="navbar-brand brand-logo-mini" href="../pages/AdminDashboard.aspx">
+                            <img src="../Content/Stellar-master/Stellar-master/images/logo-mini.svg" alt="logo" /></a>
+                    </div>
+                    <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
+                        <h5 class="mb-0 font-weight-medium d-none d-lg-flex">Welcome Coordinator!</h5>
+                        <ul class="navbar-nav navbar-nav-right ml-auto">
+
+                            <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
+                                <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                                    <img class="img-xs rounded-circle ml-2" src="../Content/Landing/green.jpg" alt="Profile image">
+                                    <span class="font-weight-normal" style="color: black;">Coordinator </span></a>
+                                <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                                    <a class="dropdown-item" href="../Default.aspx"><i class="dropdown-item-icon icon-power text-primary"></i>Sign Out</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                            <span class="icon-menu"></span>
+                        </button>
+                    </div>
+                </nav>
+                <!--/Header-->
+
+                <!-- SideBar -->
+                <div class="container-fluid page-body-wrapper">
+                    <nav class="sidebar sidebar-offcanvas">
+                        <ul class="nav">
+                            <li class="nav-item nav-profile">
+                                <a href="#" class="nav-link">
+                                    <div class="profile-image">
+                                        <img class="img-xs rounded-circle" src="../Content/Landing/green.jpg" alt="profile image">
+                                        <div class="dot-indicator bg-success"></div>
+                                    </div>
+                                    <div class="text-wrapper">
+                                        <p class="profile-name">Regional Coordinator</p>
+                                        <p class="designation">Coordinator</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="frmCoordinatorDashboard.aspx">
+                                    <span class="menu-title">Dashboard</span>
+                                    <i class="icon-screen-desktop menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="frmProgrammes.aspx">
+                                    <span class="menu-title">Programmes</span>
+                                    <i class="icon-home menu-icon"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="frmProfile.aspx">
+                                    <span class="menu-title">Profile</span>
+                                    <i class="icon-user menu-icon"></i>
+                                </a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="frmCreateManager.aspx">
+                                    <span class="menu-title">Create Manager</span>
+                                    <i class="icon-people menu-icon"></i>
+                                </a>
+                                 </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                                    <span class="menu-title">Applications</span>
+                                    <i class="icon-credit-card menu-icon"></i>
+                                </a>
+                                <div class="collapse" id="ui-basic">
+                                    <ul class="nav flex-column sub-menu">
+                                        <li class="nav-item"><a class="nav-link" href="frmViewApplication.aspx">View Applications</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="frmActionApplication.aspx">Action Application</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
+                                    <span class="menu-title">Reports</span>
+                                    <i class="icon-credit-card menu-icon"></i>
+                                </a>
+                                <div class="collapse" id="ui-basic2">
+                                    <ul class="nav flex-column sub-menu">
+                                        <li class="nav-item"><a class="nav-link" href="frmReports.aspx">View Reports</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="frmGenerateReports.aspx">Generate Reports</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </nav>
+                    <!--/Sidebar-->
+
+
+
+                    <div class="main-panel">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <!--Footer-->
+
+                        <!--/Footer-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- container-scroller -->
+        <!-- plugins:js -->
+        
+    </form>
+
+</body>
+</html>

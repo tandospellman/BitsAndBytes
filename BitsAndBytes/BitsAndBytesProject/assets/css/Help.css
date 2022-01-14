@@ -1,0 +1,203 @@
+﻿
+
+h1 {
+    color: black;
+    font-size: 45px;
+}
+
+body {
+    background-color: var(--background);
+}
+
+.center {
+    text-align: center;
+}
+
+/* Start logo code */
+.main_logo {
+    text-align: right;
+    padding: 10px
+}
+
+.header1, .header2 {
+    justify-content: center;
+    font-size: 35px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    display: inline;
+}
+
+.header2 {
+    color: mintcream;
+    border-radius: 10px;
+    background: #001FFF;
+}
+
+.header1 {
+    color: white;
+}
+
+.menubar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+    .menubar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        color: black;
+        transition: 0.3s;
+    }
+
+        .menubar a:hover {
+            color: red;
+        }
+
+    .menubar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ed2553;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+}
+
+    .openbtn:hover {
+        background-color: #444;
+    }
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .menubar {
+        padding-top: 15px;
+    }
+
+        .menubar a {
+            font-size: 18px;
+        }
+}
+
+/* End Menu icon code */
+
+
+/* Start collapsibles code */
+.collapsible {
+    background-color: var(--background);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+}
+
+    .active, .collapsible:hover {
+        background-color: mintcream;
+    }
+
+    .collapsible:after {
+        content: '\002B';
+        color: black;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+.active:after {
+    content: "\2212";
+}
+
+.innerCollapsible {
+    background-color: var(--background);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+}
+
+    .innerActive, .innerCollapsible:hover {
+        background-color: #555;
+    }
+
+    .innerCollapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+.innerActive:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+
+.innerContent {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+/* End collapsibles code */
+
+/*Start of send ticket button code */
+
+.send_Ticket {
+    padding: 30px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.ticket_Text {
+    color: white;
+    font-size: 20px;
+}
+.indent{
+    text-indent:5%;
+}
+.question{
+    font-size:16px;
+    font-weight:300;
+}
+.answer{
+    text-indent:8%;
+    font-size:15px;
+}
